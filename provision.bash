@@ -15,9 +15,9 @@ echo "## routine / provision-ubuntu-basic / starting"
 echo "## "
 echo
 
-apt-get update;
+apt update;
 
-apt -y install ca-certificates curl;
+apt install -y ca-certificates curl;
 
 install -m 0755 -d /etc/apt/keyrings
 
@@ -35,5 +35,13 @@ apt update
 apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 docker run hello-world
+
+##
+
+docker compose up -d
+
+curl localhost:80
+
+##
 
 echo "finished provision..."

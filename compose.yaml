@@ -4,7 +4,7 @@ services:
 
         container_name: docker-provision-verification
 
-        image: sofwareshinobi/docker-provision-verification
+        image: softwareshinobi/docker-provision-verification
         
         restart: unless-stopped
 
