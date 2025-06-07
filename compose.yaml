@@ -1,0 +1,13 @@
+services:
+
+    docker-provision-verification:
+
+        container_name: docker-provision-verification
+
+        image: sofwareshinobi/docker-provision-verification
+        
+        restart: unless-stopped
+
+        ports:
+
+            - "80:80"

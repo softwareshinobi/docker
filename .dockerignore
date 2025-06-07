@@ -1,0 +1,15 @@
+
+*.md
+
+*.log
+
+LICENSE
+
+.dockerignore
+
+.git*
+
+.recycle
+
+.trash
+
