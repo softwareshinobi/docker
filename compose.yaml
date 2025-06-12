@@ -6,7 +6,7 @@ services:
 
         image: softwareshinobi/docker-provision-verification
         
-        restart: unless-stopped
+        restart: no
 
         ports:
 
