@@ -40,6 +40,8 @@ docker run hello-world
 
 docker compose up -d
 
+sleep 8
+
 curl localhost:80
 
 ##
