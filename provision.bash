@@ -1,7 +1,6 @@
 #!/bin/bash
 
-set -x
-set -e
+##
 
 reset
 
@@ -9,41 +8,18 @@ clear
 
 ##
 
-echo
-echo "## "
-echo "## routine / provision-ubuntu-basic / starting"
-echo "## "
-echo
+set -x
 
-apt update;
-
-apt install -y ca-certificates curl;
-
-install -m 0755 -d /etc/apt/keyrings
-
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-
-chmod a+r /etc/apt/keyrings/docker.asc
-
-echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-  tee /etc/apt/sources.list.d/docker.list > /dev/null
-
-apt update
-
-apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-
-docker run hello-world
+set -e
 
 ##
 
-docker compose up -d
+cd provision
 
-sleep 8
+sudo bash provision.bash
 
-curl localhost:80
+cd ..
 
 ##
 
-echo "finished provision..."
+echo "finished provisioning server"
