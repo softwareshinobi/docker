@@ -2,8 +2,22 @@
 
 ##
 
+set -e
+
+set -x
+
+##
+
+reset
+
+clear
+
+##
+
 sudo apt update
 
 ##
 
-apt install -y net-tools
+apt install -y wget curl
+
+apt install -y net-tools iputils-ping dnsutils

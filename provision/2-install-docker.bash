@@ -2,15 +2,15 @@
 
 ##
 
-reset
-
-clear
-
-##
-
 set -e
 
 set -x
+
+##
+
+reset
+
+clear
 
 ##
 
